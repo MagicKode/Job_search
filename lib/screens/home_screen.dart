@@ -13,6 +13,19 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  // Константы для цветов
+  static const Color backgroundColor = Color(0xFF0C0C0C);
+  static const Color selectedItemColor = Color(0xFF2B7EFE);
+  static const Color unselectedItemColor = Color(0xFF9F9F9F);
+
+  // Константы для текста
+  static const String search = 'Поиск';
+  static const String favorite = 'Избранное';
+  static const String alerts = 'Отклики';
+  static const String message = 'Сообщения';
+  static const String person = 'Профиль';
+
   int myIndex = 0;
 
   List<Widget> widgetList = const [
@@ -26,11 +39,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF0C0C0C),
+      backgroundColor: backgroundColor,
       body: IndexedStack(index: myIndex, children: widgetList),
 
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xFF0C0C0C),
+        backgroundColor: backgroundColor,
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
@@ -39,27 +52,28 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         currentIndex: myIndex,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Поиск'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: search),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border),
-            label: 'Избранное',
+            label: favorite,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.local_post_office_outlined),
-            label: 'Отклики',
+            label: alerts,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.message),
-            label: 'Сообщения',
+            label: message,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
-            label: 'Профиль',
+            label: person,
           ),
         ],
-        selectedItemColor: Color(0xFF2B7EFE),
-        unselectedItemColor: Color(0xFF9F9F9F),
-        // backgroundColor: Color(0xFF0C0C0C),
+        selectedItemColor: selectedItemColor,
+        unselectedItemColor: unselectedItemColor,
       ),
     );
   }
