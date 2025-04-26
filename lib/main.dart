@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:job_search_frutter/screens/home_screen.dart';
+import 'package:job_search_frutter/ui/widgets/home_screen.dart';
 
 void main() {
   runApp(const JobSearchApp());

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:job_search_frutter/screens/alerts_screen.dart';
-import 'package:job_search_frutter/screens/favorites_screen.dart';
-import 'package:job_search_frutter/screens/main_screen.dart';
-import 'package:job_search_frutter/screens/messages_screen.dart';
-import 'package:job_search_frutter/screens/profile_screen.dart';
+import 'package:job_search_frutter/ui/widgets/profile_screen.dart';
+
+import 'alerts_screen.dart';
+import 'favorites_screen.dart';
+import 'main_screen.dart';
+import 'messages_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
